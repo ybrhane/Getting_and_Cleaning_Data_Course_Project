@@ -14,3 +14,6 @@ You should create one R script called run_analysis.R that does the following.
 * Download the "run_analysis.R" script file from the repository to your home/work directory
 * Run `source("run_analysis.R")` at R prompt to load the script 
 * The R script will generate an indepedent tidy data called "tiny_data.txt in your home/work directory.
+
+
+
