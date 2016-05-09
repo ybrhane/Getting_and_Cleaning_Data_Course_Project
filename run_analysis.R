@@ -19,7 +19,7 @@ subject_train <- read.table("train/subject_train.txt",header=FALSE,sep=" ")
 names(subject_train) = "subject"
 
 # Extract only the measurements on the mean and standard deviation for each measurement.
-X_train = subset(X_train,select=grepl("mean|std", featureNames))
+X_train = subset(X_train,select=grepl("mean()|std()", featureNames))
 
 # Uses descriptive activity names to name the activities in the data set
 names(y_train) = "activityID"
@@ -39,7 +39,7 @@ subject_test <- read.table("test/subject_test.txt",header=FALSE,sep=" ")
 names(subject_test) = "subject"
 
 # Extract only the measurements on the mean and standard deviation for each measurement.
-X_test = subset(X_test,select=grepl("mean|std", featureNames))
+X_test = subset(X_test,select=grepl("mean()|std()", featureNames))
 
 # Uses descriptive activity names to name the activities in the data set
 names(y_test) = "activityID"
@@ -59,3 +59,5 @@ all_data_tidy = with(all_data_tidy,all_data_tidy[order(subject,activityLabel),])
 
 # Write out tidy data 
 write.table(all_data_tidy, file = "tidy_data.txt",quote=FALSE,row.names=FALSE)
+
+
