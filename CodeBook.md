@@ -53,7 +53,6 @@ Data files and their descriptions:
 
 ## Data transformations applied (run_analysis.R)
 
-* Load required R packages (reshape, reshape2)
 * Read train and test data
 * Read features and activity labels data 
 * Select only the measurements on the mean and standard deviation
