@@ -53,6 +53,7 @@ Data files and their descriptions:
 
 ## Data transformations applied (run_analysis.R)
 
+* Change working directory to the downloaded "UCI HAR Dataset" directory:
 * Read activity labels
 * Read features.
 * Read train and test data 
