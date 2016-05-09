@@ -9,3 +9,9 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 # Analysis pipeline
+
+* Download data from the provided source link to your home/work directory 
+* Download the "run_analysis.R" script file from the repository to your home/work directory
+* Install the required packages if they are not already installed (reshape2, reshape)
+* Run `source("run_analysis.R")` at R prompt to load the script 
+* The R script will generate an indepedent tidy data called "tiny_data.txt in your home/work directory.
