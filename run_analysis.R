@@ -1,4 +1,5 @@
-setwd("UCI HAR Dataset")
+# Change working directory to the downloaded "UCI HAR Dataset" directory:
+setwd("../UCI HAR Dataset")
 
 # Read activity labels
 activityLabels <- read.table("activity_labels.txt",header=FALSE,sep=" ")[,2]
@@ -8,7 +9,6 @@ featureNames <- read.table("features.txt",header=FALSE,sep=" ")[,2]
 
 # Read train data 
 X_train <- read.table("train/X_train.txt",header=FALSE,sep="")
-dim(X_train)
 
 #Appropriately labels the data set with descriptive variable names.
 names(X_train) = featureNames
@@ -16,7 +16,6 @@ names(X_train) = featureNames
 y_train <- read.table("train/y_train.txt",header=FALSE,sep=" ")
 str(y_train)
 subject_train <- read.table("train/subject_train.txt",header=FALSE,sep=" ")
-dim(subject_train)
 names(subject_train) = "subject"
 
 # Extract only the measurements on the mean and standard deviation for each measurement.
@@ -31,14 +30,12 @@ train_data <- cbind(subject_train, y_train, X_train)
 
 # Read test data
 X_test <- read.table("test/X_test.txt",header=FALSE,sep="")
-dim(X_test)
 
 #Appropriately labels the data set with descriptive variable names.
 names(X_test) = featureNames
 y_test <- read.table("test/y_test.txt",header=FALSE,sep=" ")
 str(y_test)
 subject_test <- read.table("test/subject_test.txt",header=FALSE,sep=" ")
-dim(subject_test)
 names(subject_test) = "subject"
 
 # Extract only the measurements on the mean and standard deviation for each measurement.
@@ -61,6 +58,4 @@ all_data_tidy = aggregate(. ~subject + activityLabel, all_data, mean)
 all_data_tidy = with(all_data_tidy,all_data_tidy[order(subject,activityLabel),])
 
 # Write out tidy data 
-write.table(all_data_tidy, file = "tidy_data.txt",quote=FALSE,row.names=FALSE,sep="\t")
-
-
+write.table(all_data_tidy, file = "tidy_data.txt",quote=FALSE,row.names=FALSE)
