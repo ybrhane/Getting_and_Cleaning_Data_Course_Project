@@ -53,9 +53,13 @@ Data files and their descriptions:
 
 ## Data transformations applied (run_analysis.R)
 
-* Read train and test data
-* Read features and activity labels data 
-* Select only the measurements on the mean and standard deviation
-* Merge train and test data
-* Prepare a tidy data set with the average of each variable for each activity and each subject
-
+* Read activity labels
+* Read features.
+* Read train and test data 
+* Appropriately labels the data set with descriptive variable names.
+* Extract only the measurements on the mean and standard deviation for each measurement.
+* Uses descriptive activity names to name the activities in the data set
+* Merges the training and the test sets to create one data set.
+* creates a independent tidy data set with the average of each variable for each activity and each subject.
+* Order by subject and activity label
+* Write out tidy data 
